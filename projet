@@ -1,0 +1,33 @@
+from tkinter import *  # Importe Tkinter
+import webbrowser  # Importe Webbrowser
+
+
+def TM_channel():  # Lien de la chaine "Tintin. Minecraft", atribué a "button"
+    webbrowser.open_new("https://www.youtube.com/user/FuzeIIIHD")
+
+
+wn = Tk()  # Création de la fenètre
+
+wn.title("TMEV studio")  # Nom de la fenètre, (se trouvant entre(parantèse))
+wn.geometry("1080x720")  # Taille de la fenètre (1080p/720)
+wn.minsize(540, 360)  # Taille minimalle de la fenètre (520p/360)
+wn.config(background='orange')  # Couleur de fond de L'application (orange)
+
+frame = Frame(wn, bg="orange")  # Création de la variable 'frame' (=Frame)
+frame2 = Frame(wn, bg="orange")  # Création de la variable 'frame' (=Frame)
+
+label = Label(frame, text="Bienvenue", font=("courrier", 100), bg="Orange", fg="white",
+              )  # Crée lee texte "Bienvenue" et ajoute des modifications
+label.pack(expand=YES)  # Affiche le message label avec quelque modification
+
+label2 = Label(frame, text="TMEV studio", font=("courrier", 10), bg="Orange", fg="white",
+               )  # Crée lee texte "Bienvenue" et ajoute des modifications
+label2.pack(expand=YES)  # Affiche le message label avec quelque modification
+
+frame.pack(expand=YES)  # Affiche la frame avec ses composant tel que: "label" et "label2"
+
+button = Button(frame, text="Fuze III", font=("courrier", 20), bg="orange", fg="white", command=TM_channel
+                )  # Crée le boutton "button"
+button.pack(expand=YES, )  # Affiche le boutton "button"
+
+wn.mainloop()  # Obligatoire
